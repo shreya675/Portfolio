@@ -26,7 +26,9 @@ automatically (build command `npm run build`, output directory `dist`).
 Everything textual lives in **`src/data.ts`** — intro, "currently" lines, projects, experience, education,
 skills, links. Components in `src/components/` only render that data.
 
-Illustrations on the project cards are hand-drawn SVG/CSS in `src/components/ProjectArt.tsx`.
+Project cards show a real screenshot from `public/screens/<slug>.png` (slugs: `pcb`, `velocity`, `fraud`, `pmu`,
+`fittrack`) inside a browser-window frame. If the file is missing, the card falls back to the hand-drawn illustration
+in `src/components/ProjectArt.tsx`. Aim for ~1440×900 PNGs of the most interesting screen, not the login page.
 
 ## Before publishing
 

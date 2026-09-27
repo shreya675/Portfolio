@@ -50,6 +50,8 @@ export type Project = {
   stack: string[]
   live?: string
   code: string
+  /** Real screenshot, served from public/. Put files in public/screens/. Falls back to the illustration if missing. */
+  image?: string
   featured?: boolean
   /** featured only: put the illustration on the right */
   flip?: boolean
@@ -58,6 +60,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'pcb',
+    image: '/screens/pcb.png',
     title: 'PCB Optical Inspection',
     status: 'Live',
     period: 'Jul – Sep 2026',
@@ -75,6 +78,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'velocity',
+    image: '/screens/velocity.png',
     title: 'Velocity Keys',
     status: 'Live',
     period: 'May – Aug 2026',
@@ -93,6 +97,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'fraud',
+    image: '/screens/fraud.png',
     title: 'FraudGuard',
     status: 'Completed',
     period: 'May – Aug 2026',
@@ -109,6 +114,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'pmu',
+    image: '/screens/pmu.png',
     title: 'PMU Desktop Simulator',
     status: 'Dept. project',
     period: 'Jan – May 2026',
@@ -124,6 +130,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'fittrack',
+    image: '/screens/fittrack.png',
     title: 'FitTrack',
     status: 'Live',
     period: 'Oct 2025 – Jan 2026',

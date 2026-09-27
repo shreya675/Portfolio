@@ -1,6 +1,7 @@
 import type { MouseEvent } from 'react'
 import { profile, projects, type Project } from '../data'
 import ProjectArt from './ProjectArt'
+import Screenshot from './Screenshot'
 import { External, GitHub } from './Icons'
 
 function spotlight(e: MouseEvent<HTMLElement>) {
@@ -22,7 +23,7 @@ function Card({ p, i }: { p: Project; i: number }) {
       onMouseMove={spotlight}
     >
       <div className="project-art">
-        <ProjectArt slug={p.slug} />
+        <Screenshot src={p.image} alt={`${p.title} screenshot`} url={p.live ?? p.code} fallback={<ProjectArt slug={p.slug} />} />
       </div>
       <div className="project-body">
         <div className="project-top">
