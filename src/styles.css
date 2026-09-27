@@ -415,11 +415,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   position: absolute; left: 18px; bottom: 16px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
 }
 
-/* screenshot frame */
-.shot { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px 22px 0; }
-.project.featured .shot { inset: 0 -38% 0 0; padding: 36px 0 0 30px; justify-content: flex-start; }
-.project.featured .shot-img { flex: 1; max-height: none; }
-.project.featured .shot-img img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
+/* screenshot frame — whole image always visible, centred in the panel */
+.project-art:has(.shot) { display: flex; align-items: center; justify-content: center; }
+.shot { position: relative; width: 100%; padding: 24px; display: flex; flex-direction: column; }
+.project.featured .shot { padding: 30px 28px; }
 .shot-bar {
   display: flex; align-items: center; gap: 12px; padding: 8px 12px; flex: none;
   background: var(--bg-3); border: 1px solid var(--border-2); border-bottom: 0; border-radius: 12px 12px 0 0;
@@ -430,11 +429,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .shot-dots i:nth-child(2) { background: #fbbf24; }
 .shot-dots i:nth-child(3) { background: #34d399; }
 .shot-url { font-family: var(--mono); font-size: 10.5px; color: var(--text-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.shot-img { flex: none; max-height: calc(100% - 36px); overflow: hidden; border: 1px solid var(--border-2); border-bottom: 0; border-radius: 0; background: var(--bg-2); }
+.shot-img { overflow: hidden; border: 1px solid var(--border-2); border-radius: 0 0 12px 12px; background: var(--bg-2); box-shadow: var(--shadow); }
 .shot-img img { width: 100%; height: auto; display: block; transition: transform 0.6s var(--ease); }
 .card:hover .shot-img img { transform: scale(1.02); }
-.project-art:has(.shot) { min-height: 260px; }
-.project.featured .project-art:has(.shot) { min-height: 400px; }
 
 /* ---------- experience ---------- */
 .timeline { position: relative; display: grid; gap: 22px; }
@@ -521,7 +518,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .project.featured { grid-template-columns: 1fr; }
   .project.featured .project-art { border-right: 0; border-bottom: 1px solid var(--border); min-height: 280px; }
   .project.featured.flip .project-art { order: 0; border-left: 0; }
-  .project.featured .shot { inset: 0 -20% 0 0; padding: 22px 0 0 22px; }
+  .project.featured .shot { padding: 22px; }
   .about-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {

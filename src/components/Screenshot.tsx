@@ -4,7 +4,7 @@ import { useState, type ReactNode } from 'react'
  * Shows a real screenshot of the project inside a small browser-window frame.
  * If the image is missing or fails to load, renders `fallback` (the hand-drawn illustration) instead.
  */
-export default function Screenshot({ src, alt, url, focus, fallback }: { src?: string; alt: string; url?: string; focus?: string; fallback: ReactNode }) {
+export default function Screenshot({ src, alt, url, fallback }: { src?: string; alt: string; url?: string; fallback: ReactNode }) {
   const [ok, setOk] = useState(true)
   if (!src || !ok) return <>{fallback}</>
 
@@ -16,7 +16,7 @@ export default function Screenshot({ src, alt, url, focus, fallback }: { src?: s
         {host && <span className="shot-url">{host}</span>}
       </div>
       <div className="shot-img">
-        <img src={src} alt={alt} loading="lazy" style={focus ? { objectPosition: focus } : undefined} onError={() => setOk(false)} />
+        <img src={src} alt={alt} loading="lazy" onError={() => setOk(false)} />
       </div>
     </div>
   )
