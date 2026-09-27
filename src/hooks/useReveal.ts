@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 
-/** Adds .in to every .reveal element once it scrolls into view. */
 export function useReveal() {
   useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>('.reveal'))

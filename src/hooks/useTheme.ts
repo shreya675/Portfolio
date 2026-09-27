@@ -8,7 +8,7 @@ function initial(): Theme {
     const saved = localStorage.getItem(KEY)
     if (saved === 'dark' || saved === 'light') return saved
   } catch {
-    /* ignore */
+    // localStorage unavailable
   }
   return window.matchMedia?.('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
 }
@@ -21,7 +21,7 @@ export function useTheme() {
     try {
       localStorage.setItem(KEY, theme)
     } catch {
-      /* ignore */
+      // localStorage unavailable
     }
   }, [theme])
 

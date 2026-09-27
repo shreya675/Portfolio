@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { profile } from '../data'
 
-/** Large hero portrait. Uses /me.jpg from public/; falls back to a gradient tile with initials. */
 export default function Portrait() {
   const [ok, setOk] = useState(true)
   return (

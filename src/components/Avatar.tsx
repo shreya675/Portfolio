@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import { profile } from '../data'
 
-/**
- * Shows the photo at /me.jpg (put it in public/). If the file is missing or fails
- * to load, falls back to the gradient initials badge so the layout never breaks.
- */
 export default function Avatar({ size = 56, className = '' }: { size?: number; className?: string }) {
   const [ok, setOk] = useState(true)
   const style = { width: size, height: size }

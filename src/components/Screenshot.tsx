@@ -1,9 +1,6 @@
 import { useState, type ReactNode } from 'react'
 
-/**
- * Shows a real screenshot of the project inside a small browser-window frame.
- * If the image is missing or fails to load, renders `fallback` (the hand-drawn illustration) instead.
- */
+// screenshot in a browser frame; falls back to the illustration if the image 404s
 export default function Screenshot({ src, alt, url, fallback }: { src?: string; alt: string; url?: string; fallback: ReactNode }) {
   const [ok, setOk] = useState(true)
   if (!src || !ok) return <>{fallback}</>

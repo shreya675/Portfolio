@@ -1,6 +1,4 @@
-// ---------------------------------------------------------------------------
-// All site content lives here. Edit this file, not the components.
-// ---------------------------------------------------------------------------
+// site content
 
 export const profile = {
   name: 'Shreya Jaiswal',
@@ -12,7 +10,6 @@ export const profile = {
   intro:
     "I'm a final-year Electrical Engineering student at IIT Ropar. I build full-stack web apps and ML systems that actually get deployed — most recently a PCB inspection service running on Cloud Run and an explainable fraud-detection API. I like the part where a thing finally works end to end.",
   resume: '/Shreya_Jaiswal_Resume.pdf',
-  /** Your photo — drop a square-ish JPG/PNG at public/me.jpg (≥ 400×400). Falls back to initials if missing. */
   photo: '/me.jpg',
   email: 'jaiswalshreya246@gmail.com',
   links: {
@@ -50,10 +47,8 @@ export type Project = {
   stack: string[]
   live?: string
   code: string
-  /** Real screenshot, served from public/. Put files in public/screens/. Falls back to the illustration if missing. */
   image?: string
   featured?: boolean
-  /** featured only: put the illustration on the right */
   flip?: boolean
 }
 

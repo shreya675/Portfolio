@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 
-/** Tracks which section id is currently most visible, for nav highlighting. */
 export function useActiveSection(ids: string[]) {
   const [active, setActive] = useState<string>(ids[0] ?? '')
   useEffect(() => {

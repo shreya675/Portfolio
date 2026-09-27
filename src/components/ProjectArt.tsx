@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import type { Project } from '../data'
 
-/* Small illustrative visuals for each project card. Pure CSS / SVG, no images. */
+// fallback art for project cards when there's no screenshot
 
 function RaceArt() {
   const racers = [
@@ -78,7 +78,6 @@ function PcbArt() {
 }
 
 function PmuArt() {
-  // three phasors, 120° apart, plus a live sine trace
   const pts = Array.from({ length: 161 }, (_, i) => {
     const x = 240 + i * 1.4
     const y = 100 - Math.sin(i / 8) * 36

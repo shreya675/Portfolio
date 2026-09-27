@@ -1,8 +1,3 @@
-/* ============================================================
-   Shreya Jaiswal — portfolio styles
-   Dark-first, light theme via [data-theme="light"].
-   ============================================================ */
-
 :root {
   --bg: #0b0d14;
   --bg-2: #10131c;
@@ -342,7 +337,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .card:hover { transform: translateY(-4px); border-color: var(--border-2); box-shadow: var(--shadow); }
 .card::before {
-  /* mouse spotlight */
   content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.3s;
   background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(94, 234, 212, 0.12), transparent 45%);
 }
@@ -415,7 +409,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   position: absolute; left: 18px; bottom: 16px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
 }
 
-/* screenshot frame — featured cards: whole image centred; small cards: fixed 16:9 panel, image top-anchored */
+/* screenshot frame */
 .project-art:has(.shot) { display: flex; align-items: center; justify-content: center; }
 .project:not(.featured) .project-art:has(.shot) { aspect-ratio: 2 / 1; min-height: 0; align-items: flex-start; }
 .project:not(.featured) .shot { position: absolute; inset: 0; padding: 22px 22px 0; }
