@@ -14,6 +14,7 @@ export const profile = {
   resume: '/Shreya_Jaiswal_Resume.pdf',
   /** Your photo — drop a square-ish JPG/PNG at public/me.jpg (≥ 400×400). Falls back to initials if missing. */
   photo: '/me.jpg',
+  email: 'jaiswalshreya246@gmail.com',
   links: {
     github: 'https://github.com/shreya675',
     linkedin: 'https://www.linkedin.com/in/shreya-jaiswal-291591288/',
@@ -167,7 +168,7 @@ export const education = {
   degree: 'B.Tech, Electrical Engineering',
   school: 'Indian Institute of Technology Ropar',
   period: '2023 – 2027',
-  coursework: ['Data Structures', 'Linear Algebra', 'Probability', 'Calculus', 'Differential Equations', 'Signals & Systems', 'Digital Circuits', 'Control Engineering'],
+  coursework: ['Data Structures', 'Operating Systems', 'DBMS', 'Computer Networks', 'Linear Algebra', 'Probability', 'Calculus', 'Differential Equations', 'Signals & Systems', 'Digital Circuits', 'Control Engineering'],
 }
 
 export const competitive = {
