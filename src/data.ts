@@ -3,7 +3,7 @@
 export const profile = {
   name: 'Shreya Jaiswal',
   initials: 'SJ',
-  tagline: 'Software Developer',
+  tagline: 'Final-year B.Tech student, IIT Ropar',
   roles: ['full-stack apps', 'real-time systems', 'ML systems that ship', 'things that actually work'],
   location: 'IIT Ropar, Punjab',
   availability: 'Open to SDE roles · 2027 batch',
