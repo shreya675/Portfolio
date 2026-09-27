@@ -348,7 +348,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .card:hover::before { opacity: 1; }
 .project { display: flex; flex-direction: column; }
-.project.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.05fr 1fr; }
+.project.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; }
 .project-art {
   position: relative; min-height: 220px; overflow: hidden;
   background: linear-gradient(160deg, var(--bg-3), var(--bg-2));
@@ -418,7 +418,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* screenshot frame — whole image always visible, centred in the panel */
 .project-art:has(.shot) { display: flex; align-items: center; justify-content: center; }
 .shot { position: relative; width: 100%; padding: 24px; display: flex; flex-direction: column; }
-.project.featured .shot { padding: 30px 28px; }
+.project.featured .shot { padding: 24px 22px; }
 .shot-bar {
   display: flex; align-items: center; gap: 12px; padding: 8px 12px; flex: none;
   background: var(--bg-3); border: 1px solid var(--border-2); border-bottom: 0; border-radius: 12px 12px 0 0;

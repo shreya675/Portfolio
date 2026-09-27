@@ -66,11 +66,11 @@ export const projects: Project[] = [
     period: 'Jul – Sep 2026',
     featured: true,
     blurb:
-      'An automated optical inspection (AOI) service for printed circuit boards. Upload a board image and it returns annotated defects, a severity-graded PASS / WARNING / FAIL verdict, a PDF report, and keeps an inspection history with defect analytics.',
+      'Automated optical inspection for PCBs: upload a board image, get annotated defects, a severity-graded PASS / WARNING / FAIL verdict and a PDF report, with inspection history and defect analytics.',
     points: [
-      'YOLO11 detector trained on the DeepPCB benchmark — 95.8% precision / 94.0% recall and 97.8% mAP@0.5 on the 500-image held-out test set.',
-      'Pipeline: CLAHE preprocessing → ORB + RANSAC registration against a golden reference → detection → reference comparison for component placement and trace anomalies → rule-based severity.',
-      'Post-processing (class-agnostic NMS + box expansion) cut false positives by ~40%. FastAPI + SQLAlchemy backend, React/TypeScript dashboard, ReportLab PDFs, Docker + GitHub Actions CI, deployed on Google Cloud Run.',
+      'YOLO11 trained on DeepPCB — 95.8% precision, 94.0% recall, 97.8% mAP@0.5 on the 500-image held-out test set.',
+      'Pipeline: CLAHE → ORB + RANSAC registration against a golden reference → detection → reference comparison → rule-based severity.',
+      'FastAPI + SQLAlchemy backend, React/TypeScript dashboard, Docker + GitHub Actions CI, deployed on Google Cloud Run.',
     ],
     stack: ['Python', 'YOLO11', 'OpenCV', 'FastAPI', 'SQLAlchemy', 'React', 'TypeScript', 'Docker', 'Cloud Run'],
     live: 'https://pcb-aoi-723755393271.us-central1.run.app',
@@ -105,9 +105,9 @@ export const projects: Project[] = [
     blurb:
       'Explainable, end-to-end fraud detection for PaySim mobile-money transactions (6.36M rows): a time-aware, leakage-safe training pipeline, model comparison, threshold tuning, SHAP explanations, a FastAPI scoring service and a Streamlit dashboard.',
     points: [
-      'Chronological train / validation / test split so the model is evaluated on a later period with a ~4× higher fraud rate — no leakage from the future.',
-      '26 engineered features; the balance-reconciliation ones drive most of the lift (ablation: recall 0.85 → 0.995). Compared Logistic Regression, Random Forest and XGBoost on validation PR-AUC; deployed XGBoost at a tuned 0.98 threshold.',
-      'TreeSHAP reason codes on every prediction. Single and batch (CSV) scoring via FastAPI, five-page Streamlit dashboard, Docker Compose, 55 pytest tests and GitHub Actions CI. Caveat I put in the README: PaySim is synthetic, so the near-perfect numbers say more about the data than the model.',
+      'Chronological train / validation / test split — evaluated on a later period with a ~4× higher fraud rate, no leakage from the future.',
+      '26 engineered features; compared Logistic Regression, Random Forest and XGBoost on validation PR-AUC, deployed XGBoost at a tuned 0.98 threshold.',
+      'TreeSHAP reason codes on every prediction; FastAPI single/batch scoring, Streamlit dashboard, Docker Compose, 55 pytest tests, CI. PaySim is synthetic, so the near-perfect numbers say more about the data than the model.',
     ],
     stack: ['Python', 'XGBoost', 'scikit-learn', 'SHAP', 'Pandas', 'FastAPI', 'Streamlit', 'Docker', 'GitHub Actions'],
     code: 'https://github.com/shreya675/Fraud-Detection',
