@@ -52,6 +52,8 @@ export type Project = {
   code: string
   /** Real screenshot, served from public/. Put files in public/screens/. Falls back to the illustration if missing. */
   image?: string
+  /** CSS object-position for the screenshot crop on featured cards, e.g. '45% top'. Default 'left top'. */
+  imageFocus?: string
   featured?: boolean
   /** featured only: put the illustration on the right */
   flip?: boolean
@@ -61,6 +63,7 @@ export const projects: Project[] = [
   {
     slug: 'pcb',
     image: '/screens/pcb.png',
+    imageFocus: '46% top',
     title: 'PCB Optical Inspection',
     status: 'Live',
     period: 'Jul – Sep 2026',

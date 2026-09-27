@@ -23,7 +23,7 @@ function Card({ p, i }: { p: Project; i: number }) {
       onMouseMove={spotlight}
     >
       <div className="project-art">
-        <Screenshot src={p.image} alt={`${p.title} screenshot`} url={p.live ?? p.code} fallback={<ProjectArt slug={p.slug} />} />
+        <Screenshot src={p.image} alt={`${p.title} screenshot`} url={p.live ?? p.code} focus={p.imageFocus} fallback={<ProjectArt slug={p.slug} />} />
       </div>
       <div className="project-body">
         <div className="project-top">
