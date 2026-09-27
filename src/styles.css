@@ -415,8 +415,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   position: absolute; left: 18px; bottom: 16px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
 }
 
-/* screenshot frame — whole image always visible, centred in the panel */
+/* screenshot frame — featured cards: whole image centred; small cards: fixed 16:9 panel, image top-anchored */
 .project-art:has(.shot) { display: flex; align-items: center; justify-content: center; }
+.project:not(.featured) .project-art:has(.shot) { aspect-ratio: 2 / 1; min-height: 0; align-items: flex-start; }
+.project:not(.featured) .shot { position: absolute; inset: 0; padding: 22px 22px 0; }
+.project:not(.featured) .shot-img { flex: 1; min-height: 0; border-radius: 0; }
+.project:not(.featured) .shot-img img { width: 100%; height: auto; }
 .shot { position: relative; width: 100%; padding: 24px; display: flex; flex-direction: column; }
 .project.featured .shot { padding: 24px 22px; }
 .shot-bar {
