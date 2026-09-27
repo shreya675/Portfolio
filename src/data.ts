@@ -14,7 +14,6 @@ export const profile = {
   resume: '/Shreya_Jaiswal_Resume.pdf',
   /** Your photo — drop a square-ish JPG/PNG at public/me.jpg (≥ 400×400). Falls back to initials if missing. */
   photo: '/me.jpg',
-  email: 'jaiswalshreya246@gmail.com',
   links: {
     github: 'https://github.com/shreya675',
     linkedin: 'https://www.linkedin.com/in/shreya-jaiswal-291591288/',
