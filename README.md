@@ -1,13 +1,45 @@
-# SDE portfolio
+# Shreya Jaiswal — portfolio
 
-A responsive, dependency-free portfolio. The publishable source lives in `dist/`.
+Personal site. React + TypeScript + Vite, plain CSS (no UI library), no tracking.
 
-## Preview
+## Run locally
 
-Run `python -m http.server 4173 --bind 127.0.0.1 --directory dist` from this folder and open http://127.0.0.1:4173.
+```bash
+npm install
+npm run dev
+```
 
-## Personalize before sharing with recruiters
+Open http://localhost:5173.
 
-Edit `dist/index.html`: replace Your Name (including the page title), introduction, project placeholders, education/story, and skills. Replace each illustrative project with real work; include only verified claims. Add genuine email, LinkedIn, GitHub, and resume links in the contact section, then remove the draft notices. No fake contact links or fabricated experience are included.
+## Build / deploy
 
-Styling lives in `dist/styles.css`. Fonts load from Google Fonts with local fallbacks. Native HTML details elements provide keyboard-accessible project guidance; no JavaScript or build dependencies are required.
+```bash
+npm run build      # type-checks, then outputs static files to dist/
+npm run preview    # serve the production build locally
+```
+
+Deploy anywhere that hosts static files. On **Vercel** or **Netlify** just import the repo — they detect Vite
+automatically (build command `npm run build`, output directory `dist`).
+
+## Editing content
+
+Everything textual lives in **`src/data.ts`** — intro, "currently" lines, projects, experience, education,
+skills, links. Components in `src/components/` only render that data.
+
+Illustrations on the project cards are hand-drawn SVG/CSS in `src/components/ProjectArt.tsx`.
+
+## Before publishing
+
+- [ ] Put your resume at `public/Shreya_Jaiswal_Resume.pdf` — the Resume buttons link to it.
+- [ ] Read the project bullets in `src/data.ts` and rewrite anything that isn't in your own words.
+- [ ] Update the "currently" lines in `data.ts` and the "Last updated" text in `src/components/Footer.tsx`
+      every few months.
+- [ ] `dist/` is now git-ignored (it's a build output). If the old `dist/` files are still tracked, run
+      `git rm -r --cached dist` once.
+
+## Stack notes
+
+- Dark theme by default, light theme via the toggle (remembers your choice).
+- Scroll-reveal, typewriter, marquee and card spotlight are ~60 lines of plain CSS/JS — no animation library.
+- Fonts: Inter, Sora, JetBrains Mono from Google Fonts. Remove the `<link>` tags in `index.html` to go fully
+  self-hosted (the CSS falls back to system fonts).
