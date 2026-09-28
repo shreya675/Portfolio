@@ -1,5 +1,6 @@
 import { profile } from '../data'
-import { Arrow, Download, GitHub, LinkedIn, Mail } from './Icons'
+import { Download, GitHub, LinkedIn, Mail } from './Icons'
+import ContactForm from './ContactForm'
 
 export default function Contact() {
   return (
@@ -12,11 +13,12 @@ export default function Contact() {
           </h2>
           <p>
             Hiring for an SDE role or internship for the 2027 batch? Or just want to talk about one of the projects above?
-            Email is the fastest way to reach me; LinkedIn works too.
+            Drop a message below, or reach me directly.
           </p>
+          <ContactForm />
           <div className="contact-actions">
-            <a className="btn btn-grad btn-lg" href={`mailto:${profile.email}`}>
-              <Mail /> Email me <Arrow />
+            <a className="btn btn-lg" href={`mailto:${profile.email}`}>
+              <Mail /> Email
             </a>
             <a className="btn btn-lg" href={profile.links.linkedin} target="_blank" rel="noopener">
               <LinkedIn size={16} /> LinkedIn
