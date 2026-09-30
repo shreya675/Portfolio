@@ -87,7 +87,7 @@ export const projects: Project[] = [
       'First project where I had to handle a player disconnecting mid-race — most of the tricky bugs lived there.',
     ],
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Node', 'Socket.IO', 'PostgreSQL', 'Prisma'],
-    live: 'https://velocity-keys-production.up.railway.app/',
+    live: 'https://velocity-keys.onrender.com/',
     code: 'https://github.com/shreya675/Velocity-Keys',
   },
   {
@@ -116,8 +116,8 @@ export const projects: Project[] = [
     blurb:
       'A desktop app that simulates a Phasor Measurement Unit streaming to a Phasor Data Concentrator over TCP/IP, following the IEEE C37.118 frame format. Built for the EE department.',
     points: [
-      'Binary frame parsing and the TCP stream between PMU and PDC.',
-      'Packaged as an Electron app so it runs as a normal desktop program.',
+      'Implements the C37.118 config / header / data frames over TCP, streaming 8 channels at 60 fps to a PDC with an IP allow-list.',
+      'Injectable fault events (voltage sag, frequency drop, phase shift) for testing the PDC side; packaged as an Electron desktop app.',
       'The most "EE meets software" thing I have built — reading the standard was half the work.',
     ],
     stack: ['Electron', 'Node.js', 'TCP/IP', 'Binary protocols'],
@@ -132,7 +132,7 @@ export const projects: Project[] = [
     blurb:
       'A workout tracker with progress charts and exercise recommendations. Log what you did, see how you are trending, and get suggestions based on your history.',
     points: [
-      'Content-based recommender: cosine similarity over 6+ exercise features across 50+ exercises, top 3 returned.',
+      'Content-based recommender: scores 63 exercises on 8 dimensions against a 12-week recency-weighted history and returns the top 3 that fill gaps in your training mix.',
       'Firebase Auth + Cloud Firestore; React + Vite front end.',
       'My first real React project — I would structure the state very differently today.',
     ],
@@ -148,9 +148,9 @@ export const experience = [
     org: 'Chitwan',
     period: 'May – Jul 2026',
     mode: 'Remote',
-    summary: 'Worked on the multiplayer side of a browser-based games platform — six games, up to six players per room.',
+    summary: 'Worked in a small engineering team on the multiplayer layer of a browser-based games platform — six games, up to six players per room.',
     points: [
-      'Room creation and shareable-link joining, player interactions, turn validation and real-time game-state workflows.',
+      'Implemented room creation, shareable-link joining and turn validation on top of the real-time game-state flow.',
       'REST API integration and client-side JavaScript for player, room, match and leaderboard data, with input validation and API error handling.',
     ],
     stack: ['JavaScript', 'REST APIs', 'Real-time state'],
@@ -170,7 +170,7 @@ export const education = {
   degree: 'B.Tech, Electrical Engineering',
   school: 'Indian Institute of Technology Ropar',
   period: '2023 – 2027',
-  coursework: ['Data Structures', 'Operating Systems', 'DBMS', 'Computer Networks', 'Linear Algebra', 'Probability', 'Calculus', 'Differential Equations', 'Signals & Systems', 'Digital Circuits', 'Control Engineering'],
+  coursework: ['Data Structures', 'Linear Algebra', 'Probability', 'Calculus', 'Differential Equations', 'Signals & Systems', 'Digital Circuits', 'Control Engineering'],
 }
 
 export const competitive = {
