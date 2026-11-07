@@ -12,7 +12,7 @@ function spotlight(e: MouseEvent<HTMLElement>) {
 }
 
 function statusClass(s: Project['status']) {
-  return s === 'Live' ? 'live' : s === 'Completed' ? 'done' : ''
+  return s === 'Live' ? 'live' : s === 'Completed' ? 'done' : s === 'Published' ? 'pub' : ''
 }
 
 function Card({ p, i }: { p: Project; i: number }) {
@@ -32,6 +32,7 @@ function Card({ p, i }: { p: Project; i: number }) {
           <span className="period">{p.period}</span>
         </div>
         <p>{p.blurb}</p>
+        {p.publication && <p className="pub-note">📄 {p.publication}</p>}
         <ul>
           {p.points.map((pt) => <li key={pt}>{pt}</li>)}
         </ul>

@@ -364,6 +364,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .status.live i { background: var(--live); box-shadow: 0 0 10px var(--live); }
 .status.done { color: var(--accent-2); border-color: color-mix(in srgb, var(--accent-2) 40%, transparent); }
 .status.done i { background: var(--accent-2); }
+.status.pub { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.status.pub i { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.pub-note { font-size: 13px; color: var(--accent); font-weight: 500; margin: -4px 0 10px; }
 .status.wip { color: var(--wip); border-color: color-mix(in srgb, var(--wip) 40%, transparent); }
 .status.wip i { background: var(--wip); }
 .period { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--text-3); }

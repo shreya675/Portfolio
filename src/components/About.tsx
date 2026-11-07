@@ -1,4 +1,4 @@
-import { competitive, education, leadership, skills } from '../data'
+import { competitive, education, leadership, publications, skills } from '../data'
 import { External } from './Icons'
 
 export default function About() {
@@ -37,6 +37,11 @@ export default function About() {
                   <span>{competitive.codechef.value}</span>
                   <External size={12} />
                 </a>
+                <a href={competitive.codeforces.url} target="_blank" rel="noopener">
+                  <b>{competitive.codeforces.label}</b>
+                  <span>{competitive.codeforces.value}</span>
+                  <External size={12} />
+                </a>
               </div>
               <p className="note">Mostly data structures and algorithms in C++ — arrays, graphs, DP, the usual suspects.</p>
             </div>
@@ -58,6 +63,16 @@ export default function About() {
             <p className="note">The web stack is home turf; most of the ML column comes from the PCB and FraudGuard projects above.</p>
           </div>
             <div className="card panel reveal" data-delay="2">
+              <h3>Publications</h3>
+              {publications.map((pub) => (
+                <div className="lead-item" key={pub.title}>
+                  <b>“{pub.title}”</b>
+                  <span>{pub.venue} · {pub.status}, {pub.year}</span>
+                </div>
+              ))}
+              <p className="note">Came out of the PMU simulator project above — the EE department wanted a reproducible way to test PDCs.</p>
+            </div>
+            <div className="card panel reveal" data-delay="3">
               <h3>Outside of code</h3>
               {leadership.map((l) => (
                 <div className="lead-item" key={l.role}>

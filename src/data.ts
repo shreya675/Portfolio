@@ -8,7 +8,7 @@ export const profile = {
   location: 'IIT Ropar, Punjab',
   availability: 'Open to SDE roles · 2027 batch',
   intro:
-    "I'm a final-year Electrical Engineering student at IIT Ropar. I build full-stack web apps and ML systems that actually get deployed — most recently a PCB inspection service running on Cloud Run and an explainable fraud-detection API. I like the part where a thing finally works end to end.",
+    "I'm a final-year Electrical Engineering student at IIT Ropar. I build full-stack web apps and ML systems that actually get deployed — most recently a PCB inspection service running on Cloud Run and an explainable fraud-detection API. I like the part where a thing finally works end to end. One of those projects turned into a conference paper at NPSC.",
   resume: '/Shreya_Jaiswal_Resume.pdf',
   photo: '/me.jpg',
   email: 'jaiswalshreya246@gmail.com',
@@ -17,11 +17,12 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/shreya-jaiswal-291591288/',
     leetcode: 'https://leetcode.com/u/shreya246/',
     codechef: 'https://www.codechef.com/users/shreya_j246',
+    codeforces: 'https://codeforces.com/profile/Shreya246',
   },
   stats: [
     { label: 'LeetCode solved', value: '400+' },
     { label: 'Projects shipped', value: '5' },
-    { label: 'Live demos', value: '3' },
+    { label: 'Conference paper', value: '1' },
     { label: 'Graduating', value: '2027' },
   ],
 }
@@ -40,7 +41,7 @@ export const marquee = [
 export type Project = {
   slug: 'velocity' | 'pcb' | 'fraud' | 'pmu' | 'fittrack'
   title: string
-  status: 'Live' | 'Completed' | 'Dept. project'
+  status: 'Live' | 'Completed' | 'Dept. project' | 'Published'
   period: string
   blurb: string
   points: string[]
@@ -50,6 +51,7 @@ export type Project = {
   image?: string
   featured?: boolean
   flip?: boolean
+  publication?: string
 }
 
 export const projects: Project[] = [
@@ -111,8 +113,9 @@ export const projects: Project[] = [
     slug: 'pmu',
     image: '/screens/pmu.png',
     title: 'PMU Desktop Simulator',
-    status: 'Dept. project',
+    status: 'Published',
     period: 'Jan – May 2026',
+    publication: 'Conference paper accepted at NPSC, IIT Patna',
     blurb:
       'A desktop app that simulates a Phasor Measurement Unit streaming to a Phasor Data Concentrator over TCP/IP, following the IEEE C37.118 frame format. Built for the EE department.',
     points: [
@@ -176,7 +179,18 @@ export const education = {
 export const competitive = {
   leetcode: { label: 'LeetCode', value: '400+ problems', url: 'https://leetcode.com/u/shreya246/' },
   codechef: { label: 'CodeChef', value: '4★ (4-star)', handle: 'shreya_j246', url: 'https://www.codechef.com/users/shreya_j246' },
+  codeforces: { label: 'Codeforces', value: 'max rating 1160', handle: 'Shreya246', url: 'https://codeforces.com/profile/Shreya246' },
 }
+
+export const publications = [
+  {
+    title: 'A Desktop Application for Simulated IEEE C37.118-2 Phasor Measurement Unit Testing Using Electron and Node.js',
+    venue: 'National Power Systems Conference (NPSC), IIT Patna',
+    status: 'Accepted',
+    year: '2026',
+    project: 'pmu',
+  },
+]
 
 export const leadership = [
   { role: 'Coordinator, Aeromodelling Club', org: 'IIT Ropar', period: 'Apr 2024 – May 2025' },
