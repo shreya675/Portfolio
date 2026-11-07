@@ -16,7 +16,7 @@ export const profile = {
     github: 'https://github.com/shreya675',
     linkedin: 'https://www.linkedin.com/in/shreya-jaiswal-291591288/',
     leetcode: 'https://leetcode.com/u/shreya246/',
-    codechef: 'https://www.codechef.com/users/bloat_epic_97',
+    codechef: 'https://www.codechef.com/users/shreya_j246',
   },
   stats: [
     { label: 'LeetCode solved', value: '400+' },
@@ -175,7 +175,7 @@ export const education = {
 
 export const competitive = {
   leetcode: { label: 'LeetCode', value: '400+ problems', url: 'https://leetcode.com/u/shreya246/' },
-  codechef: { label: 'CodeChef', value: '4★ (4-star)', handle: 'bloat_epic_97', url: 'https://www.codechef.com/users/bloat_epic_97' },
+  codechef: { label: 'CodeChef', value: '4★ (4-star)', handle: 'shreya_j246', url: 'https://www.codechef.com/users/shreya_j246' },
 }
 
 export const leadership = [
