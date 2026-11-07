@@ -16,7 +16,7 @@ export const profile = {
     github: 'https://github.com/shreya675',
     linkedin: 'https://www.linkedin.com/in/shreya-jaiswal-291591288/',
     leetcode: 'https://leetcode.com/u/shreya246/',
-    codeforces: 'https://codeforces.com/profile/Shreya246',
+    codechef: 'https://www.codechef.com/users/bloat_epic_97',
   },
   stats: [
     { label: 'LeetCode solved', value: '400+' },
@@ -29,7 +29,7 @@ export const profile = {
 export const now = [
   { label: 'Now', text: 'Final year of B.Tech EE at IIT Ropar · looking for full-time SDE roles, 2027 batch' },
   { label: 'Recently', text: 'SDE intern at Chitwan — multiplayer game rooms and real-time state' },
-  { label: 'Practising', text: 'LeetCode 400+ problems · Codeforces max rating 1160' },
+  { label: 'Practising', text: 'LeetCode 400+ problems · 4★ on CodeChef' },
 ]
 
 export const marquee = [
@@ -175,7 +175,7 @@ export const education = {
 
 export const competitive = {
   leetcode: { label: 'LeetCode', value: '400+ problems', url: 'https://leetcode.com/u/shreya246/' },
-  codeforces: { label: 'Codeforces', value: 'max rating 1160', handle: 'Shreya246', url: 'https://codeforces.com/profile/Shreya246' },
+  codechef: { label: 'CodeChef', value: '4★ (4-star)', handle: 'bloat_epic_97', url: 'https://www.codechef.com/users/bloat_epic_97' },
 }
 
 export const leadership = [

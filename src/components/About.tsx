@@ -32,9 +32,9 @@ export default function About() {
                   <span>{competitive.leetcode.value}</span>
                   <External size={12} />
                 </a>
-                <a href={competitive.codeforces.url} target="_blank" rel="noopener">
-                  <b>{competitive.codeforces.label}</b>
-                  <span>{competitive.codeforces.value}</span>
+                <a href={competitive.codechef.url} target="_blank" rel="noopener">
+                  <b>{competitive.codechef.label}</b>
+                  <span>{competitive.codechef.value}</span>
                   <External size={12} />
                 </a>
               </div>
